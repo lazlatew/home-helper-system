@@ -1,0 +1,25 @@
+﻿<h2>Списък със задачи</h2>
+<form method="get">
+    <input name="search" placeholder="Търси по име" />
+    <button type="submit">Търси</button>
+</form>
+
+<table border="1">
+    <tr>
+        <th>Име</th>
+        <th>Описание</th>
+        <th>Краен срок</th>
+        <th>Бюджет</th>
+        <th>Категория</th>
+    </tr>
+    @foreach (var task in Model)
+    {
+        <tr>
+            <td>@task.Name</td>
+            <td>@task.Description</td>
+            <td>@task.Deadline</td>
+            <td>@task.Budget</td>
+            <td>@task.Category</td>
+        </tr>
+    }
+</table>
